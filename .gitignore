@@ -1,0 +1,6 @@
+#secret jsonファイルを含まない
+secret_data.json
+#test directory ignore
+test/
+#readme 
+readme

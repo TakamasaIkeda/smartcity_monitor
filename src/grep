@@ -1,0 +1,255 @@
+    1  echo $SHELL
+    2  unzip Downloads/settingFiles.zip
+    3  cd dow
+    4  unzip settingFiles.zip
+    5  mv settingFiles/.vimrc ../
+    6  mv settingFiles/.zshrc ..
+    7  ls settingFiles
+    8  mkdir .ssh
+    9  mv Downloads/settingFiles/id_rsa .ssh
+   10  brew install git
+   11  mv Downloads/.ssh/
+   12  mv Downloads/config ./.ssh
+   13  cp Downloads/id_rsa.pub Downloads/known_hosts .ssh
+   14  c200620061228
+   15  ssh cpu
+   16  unalias vim
+   17  unzip atom.zip
+   18  mv atom ../.atom
+   19  mv atom ..
+   20  rm -rf .atom
+   21  mv atom .atom
+   22  apm update
+   23  apm upgrade
+   24  rm -rf atom.*
+   25  unzip minarepo-web-viewer-2016-08-17.zip
+   26  mv minarepo-web-viewer ../Desktop
+   27  cd minarepoviewer/
+   28  brew install tmux
+   29  vim re
+   30  sass --scss --watch ./scss:./css
+   31  brew install npm
+   32  cd jsx -x jsx --watch ./jsx ./js
+   33  brew install sass
+   34  ruby -v
+   35  gem install sass
+   36  sudo gem install sasa
+   37  sudo gem install sass
+   38  gem update -system
+   39  gem update --system
+   40  sudo gem update --system
+   41  gem update sass
+   42  npm
+   43  curl https://raw.githubusercontent.com/hokaccha/nodebrew/master/nodebrew | perl - setup
+   44  export PATH=$HOME/.nodebrew/current/bin:$PATH
+   45  nodebrew help
+   46  nodebrew install latest
+   47  npm help
+   48  npm install jsx
+   49  npm install -g jsx
+   50  jsx
+   51  which sass
+   52  cd minarepoviewer/static
+   53  sass -scss -watch ./scss:./css
+   54  cd Desktop/minarepo-web-viewer/minarepoviewer/static
+   55  npm instal react-tools
+   56  npm install react-tools
+   57  jsx jsx --watch ./jsx ./js
+   58  npm uninstall jsx
+   59  which jsx
+   60  npm -g install react-tools
+   61  brew install mysql
+   62  brew services start mysql
+   63  mysql -u root
+   64  scp dali:~/dump.sql .
+   65  scp dali:~/dump.sql /tmp/
+   66  mysql -u root FujisawaMinaRepo < /tmp/dump.sql
+   67  sudo easy_install pip
+   68  install virtualenv
+   69  sudo pip instal virtualenv
+   70  sudo pip install virtualenv
+   71  cd minarepo-web-viewer/
+   72  virtualenv --no-site-packages
+   73  source ./.venv/bin/activate
+   74  cp ./mysql.secret.json.template ./mysql.secret.json
+   75  python ./minarepoviewer/server.py ./junk/mysql.secret.json
+   76  pip install -r ./requirements.txt
+   77  pip install click
+   78  sudo pip install ./requirements.txt
+   79  sudo pip install -r ./requirements.txt
+   80  cd Desktop/minarepo-web-viewer
+   81  cd .atom
+   82  cd packages
+   83  mv react ..
+   84  rm -rf .
+   85  rm -rf *
+   86  mv ../react .
+   87  apm autocomplete-paths
+   88  apm install autocomplete-paths
+   89  apm install color-picker
+   90  apm install minimap
+   91  apm install minimap-autohide
+   92  apm install minimap-highlight-selected
+   93  apm install pigments
+   94  apm install project-manager
+   95  apm install atom-dark-ui-slim
+   96  apm install emmet
+   97  apm install atom-beautify
+   98  apm install file-icons
+   99  apm install react
+  100  sass -scss --watch ./scss:./css
+  101  jsx -x jsx --watch ./jsx ./js
+  102  git checkout --mrv.jsx
+  103  cd minarepoviewer
+  104  cd static
+  105  cd jsx
+  106  git checkout mrv.jsx
+  107  git brnach
+  108  git checkout -- mrv.jsx
+  109  git chekcout mastee
+  110  git checkout master
+  111  git branch
+  112  mkdir htmlTest
+  113  touch index.html
+  114  touch main.css
+  115  apm install autocomplete-plus
+  116  apm install less-than-slash
+  117  cd foundation-6.2.3-essential
+  118  cd css
+  120  mv * ..
+  121  rm foundation-6.2.3-essential/
+  122  rm -rf foundation-6.2.3-essential
+  123  open idne
+  124  apm install vim-mode
+  125  ping
+  126  help mail
+  127  mail
+  128  man mail
+  129  mail -v
+  130  socks-cux
+  131  vim .zshr
+  132  vi .zshrc
+  133  socks-dali
+  134  brew install fetchmail
+  135  ks
+  136  less README.md
+  137  python ./minarepoviewer/server.py -m ./junk/mysql.secret.json
+  138  cd htmlTest
+  139  mkdir c++
+  141  vim ~/.vimr
+  143  rm ~/.zcompdump
+  144  exec $SHELL -l
+  145  cpp helloworld.cpp
+  146  gcc -o helloworld.exe helloworld.cpp
+  147  gcc helloworld.cpp
+  148  vim helloworld.cpp
+  149  g++ helloworld.cpp
+  150  g++ hello
+  151  vim hello2.cpp
+  152  g++ hello2.cpp
+  153  ./a
+  154  g++ neko.cpp
+  155  vim neko.cpp
+  156  mv neko.cpp Neko.cpp
+  157  cat Neko.cpp
+  158  g++ Neko.cpp
+  159  ./a.out
+  160  g++ -o NekoInu Neko.cpp
+  161  vim Neko.cpp
+  162  git clone https://github.com/TakamasaIkeda/auto-specification.git
+  163  pip install httplib2
+  164  python update
+  165  cd auto-specification
+  166  vim client_secret.json
+  167  vim githubInterface.py
+  168  pip install request
+  169  sudo pip install requests
+  170  sudo pip install httplib2
+  171  sudo pip install apiclient
+  174  pip install oauth2client
+  175  sudo pip install oauth2client
+  176  sudo pip install --upgrade google-api-python-client
+  177  python quickstart.py
+  178  vim ssInterface.py
+  179  rm ssInterface.py
+  180  rm ssInterface.pyc
+  181  vim quickstart.py
+  182  ssh dlai
+  183  less config
+  184  ssh tkms@erns.mag.keio.ac.jp
+  185  cls
+  186  cd id
+  187  cp id_rsa ~/Desktop
+  188  which brew
+  189  brew upate
+  190  sudo chown -R $(whoami) /usr/local
+  191  sudo chown root:wheel /usr/local
+  192  brew update
+  193  brew upgrade
+  194  git config --local --replace-all homebrew.private tru
+  195  ssh tkms@cux1.sfc.keio.ac.jp
+  196  ssh tkms@cux01.sfc.keio.ac.jp
+  197  ssh cux
+  198  vim .vim
+  199  vim .vimrc
+  200  cd c++
+  201  ssherns
+  202  rsync -r c++ erns
+  203  cd erns
+  204  rm -rf erns
+  205  LS
+  206  cd se
+  207  cd D
+  208  open 201609151305205871.pdf
+  209  rm -rf 2016*
+  210  open application2016.xlsx
+  211  rm -rf .zip
+  212  rm -rf atom-mac.zip
+  213  rm -rf settingFiles*
+  214  rm -rf *.zip
+  215  rm -rf *.dmg
+  216  open 01.pdf
+  217  rm -rf 01.pdf
+  218  mv status_check.py ~/Desktop
+  219  ping fujisawa-minarepo.ht.sfc.keio.ac.jp
+  222  sudo pip install --upgrade pip
+  223  mkdir smartcity
+  224  mv *.py smartcity
+  225  git init
+  226  git commit
+  227  git commit -m "first commit"
+  228  pip install requests
+  229  which pip
+  230  which python
+  232  pip uninstall *
+  233  cd /private/var/folders/jd/1v0y_0qs74g3r0bwftm1szs80000gn/T/pip-HVz08J-uninstall/
+  234  cd Library
+  235  cd Python
+  236  cd 2.7
+  237  si
+  238  cd pip-8.1.2-py2.7.egg
+  239  cd poi
+  240  cd pip
+  241  git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+  242  git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+  243  echo 'export PYENV_ROOT=$HOME/.pyenv\nexport PATH=$PYENV_ROOT/bin:$PATH\neval "$(pyenv init -)"\neval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+  244  mv ~/.pyenv .
+  245  pyenv install 3.5.0
+  247  less ~/.bash_profile
+  248  less .zshrc
+  249  mv Desktop/smartcity/.pyenv .
+  250  cd minarepo-web-viewer
+  251  sl -a
+  252  cd .venv
+  253  vim ..
+  254  c
+  255  vim .bash_profile
+  256  chmod 744 test.sh
+  257  ./test.sh 1 2 34
+  258  vim te
+  259  ./test.sh
+  260  vim test.sh
+  261  vim m
+  262  which rsync
+  263  man rsync
+  264  rsync -auzr --delete -e ssh . erns:~/Desktop
