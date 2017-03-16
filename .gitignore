@@ -1,6 +1,10 @@
 #secret jsonファイルを含まない
-secret_data.json
+#secret_data.json
 #test directory ignore
 test/
 #readme 
 readme
+#.pyc
+*.pyc
+#*.swp
+*.swp
