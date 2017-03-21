@@ -7,4 +7,4 @@ readme
 #.pyc
 *.pyc
 #*.swp
-*.swp
+*.py.swp
