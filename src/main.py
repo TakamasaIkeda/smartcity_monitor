@@ -10,6 +10,8 @@ def get_json_property():
  f = open(JSON_PATH, 'rb')
  return json.load(f) 
   
+#TODO: ログイン情報やアドレスなどの情報のjsonファイルをロードし、各ステータスをロード. 返り値次第でwebのステータスファイルとログ吐き出し,メールのsendを行う.
+
 def main():
   json = get_json_property() 
   ping_status = ping(json['host']) 
