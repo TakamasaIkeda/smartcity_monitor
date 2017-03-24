@@ -1,38 +1,46 @@
-#status {
-  color:red;
-}
-
 body {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
 }
 
-header,
-footer {
-  text-align: center;
+.header{
   flex: 0;
+  width: 100%;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #424242;
+  min-height: 10vh;
+  font-size: 1px;
 }
 
-
-.holyGrail {
+.body {
+  display: -webkit-flex;
   display: flex;
   flex: 1;
+  background: #58ACFA;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
-.content {
+#page-title {
+  -webkit-align-items: center; /* Safari */
+  align-items: center;
+  display: flex;
+  flex: -1;
+  color: #F2F2F2;
+  font-size: 15px;
+  font-family: "YuGothic";
+}
+
+#status {
   flex: 1;
+  border-color: white;
 }
 
-.side-nav,
-.side-bar{
-  width: 200px;
-  color: black:
-}
+#status_box {
 
-.side-nav {
-  order: -1;
 }
