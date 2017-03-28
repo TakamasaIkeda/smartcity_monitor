@@ -42,9 +42,13 @@ def ping(host):
         return 1
 
 
-def http_request(url, uid, password):
-    request = requests.get(url, auth=(uid, password)) 
-    status = request.status_code
+def http_request(url, uid=None, password=None):
+    status = 0
+    try:
+      request = requests.get(url, auth=(uid, password)) 
+      status = request.status_code
+    except:
+      print 'BAD Request: Maybe URL is wrong?'
 
     if status == 200:
         print("[HTTP OK]:" + url) 
@@ -74,11 +78,9 @@ class XmppCheck(sleekxmpp.ClientXMPP):
     #When ping result was False or None
     if result is None or result is False:
      self.disconnect() 
-     print("Ping Not Good") 
      return 1
     else:
      self.disconnect() 
-     print("Ping Good") 
      return 0
 
   def xmpp_ping(self): 
@@ -86,3 +88,5 @@ class XmppCheck(sleekxmpp.ClientXMPP):
       self.process(block=True) 
     else:
       print("unable to connect")  
+
+if __name__ == "__main__":
