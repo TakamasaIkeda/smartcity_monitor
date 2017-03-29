@@ -21,15 +21,15 @@ def send_mail(from_addr, to_addr, message_num):
   msg['Date'] = formatdate() 
   
   try:
-    s = smtplib.SMTP_SSL('vinci.ht.sfc.keio.ac.jp', 465) 
+    s = smtplib.SMTP_SSL('', 465) 
     s.connect() 
-    s.login('takamasa', 'tkms13??') 
+    s.login('', '') 
     print('yes') 
     s.sendmail(from_addr, [to_addr], msg.as_string()) 
     s.close() 
-  except smtplib.SMTPSenderRefused, error:
-    print(error) 
-    print'yes'
+  except:
+    #print(error) 
+    print('Some bad exception occured while before sending') 
 
 if __name__ == '__main__':
-  send_mail(FROM_ADDR, TO_ADDR, 1) 
+  send_mail('takamasa@ht.sfc.keio.ac.jp', 'takamasa@ht.sfc.keio.ac.jp', 1) 
