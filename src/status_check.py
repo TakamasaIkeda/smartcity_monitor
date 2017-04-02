@@ -84,9 +84,13 @@ class XmppCheck(sleekxmpp.ClientXMPP):
      return 0
 
   def xmpp_ping(self): 
+    print("test")
     if self.connect():
       self.process(block=True) 
+      print("test")
     else:
       print("unable to connect")  
 
 if __name__ == "__main__":
+  xmpp = XmppCheck('monitor@sox.ht.sfc.keio.ac.jp', 'miro')
+  

@@ -13,7 +13,7 @@ def status_logging(msg_num):
 def db_push(protocol, dst, status_num): 
   status = (status_num == 0) 
   
-  connector = MySQLdb.connect(host='localhost', db="SmartcityLog", user="root", charset="utf8")   
+  connector = MySQLdb.connect(host='localhost', db="SmartcityLog", user="takamasa", charset="utf8")   
   cursor = connector.cursor() 
   
   timestamp = time.strftime('%Y-%m-%d %H:%M:%S') 
