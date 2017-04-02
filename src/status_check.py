@@ -58,39 +58,33 @@ def http_request(url, uid=None, password=None):
         return 1
 
 #xmpp checking
-class XmppCheck(sleekxmpp.ClientXMPP): 
-  def __init__(self, jid, pw):
-    super(XmppCheck, self).__init__(jid,pw)  
-    self.register_plugin('xep_0030')  
-    self.register_plugin('xep_0004')  
-    self.register_plugin('xep_0060')  
-    self.register_plugin('xep_0199') #xmpp_ping's registration 
-    self.add_event_handler("session_start", self.start, threaded=False) 
+
+class XmppPing(sleekxmpp.ClientXMPP): 
+  def __init__(self, jid, password, pingjid): 
+     self.flag = int()
+     sleekxmpp.ClientXMPP.__init__(self, jid, password) 
+     if pingjid is None:
+     	pingjid = self.boundjid.bare
+     self.pingjid = pingjid
+     self.register_plugin('xep_0030') 
+     self.register_plugin('xep_0004') 
+     self.register_plugin('xep_0060') 
+     self.register_plugin('xep_0199') 
+     self.add_event_handler("session_start", self.start, threaded=True) 
 
   def start(self, event): 
-    #get connection
-    self.send_presence()    
-    self.get_roster() 
+     self.send_presence() 
+     self.get_roster()
 
-    print("send ping") 
-    result = self['xep_0199'].send_ping(self.jid, block=True)
+     try:
+       rtt = self['xep_0199'].ping(self.pingjid, timeout=10) 
+       print("[XMPP OK]: RTT: %s", rtt) 
+       self.flag = 0
+     except IqError as e:
+       print("[XMPP Error]%s: %s", self.pingjid, e.iq['error']['connection']) 
+       self.flag = 1
+     finally:
+       self.disconnect()
 
-    #When ping result was False or None
-    if result is None or result is False:
-     self.disconnect() 
-     return 1
-    else:
-     self.disconnect() 
-     return 0
-
-  def xmpp_ping(self): 
-    print("test")
-    if self.connect():
-      self.process(block=True) 
-      print("test")
-    else:
-      print("unable to connect")  
-
-if __name__ == "__main__":
-  xmpp = XmppCheck('monitor@sox.ht.sfc.keio.ac.jp', 'miro')
-  
+  def get_status(self): 
+      return self.flag

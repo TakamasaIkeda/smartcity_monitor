@@ -6,12 +6,11 @@ from email.MIMEText import MIMEText
 from email.Utils import formatdate
 
 message = [
-            "HOST PING ERROR OCCURED: HOST PING NOT RETURNED"
+            "HOST PING ERROR OCCURED: HOST PING NOT RETURNED",
             "HTTP ERROR OCCURED: STATUS NOT 200",
-            "XMPP ERROR OCCURED: PING NOT RETURENED",
+            "XMPP ERROR OCCURED: PING NOT RETURENED"
           ]
 
-#TODO: cannot login to vinci by smtp_ssl
 #argument:; 0:Host ping, 1:HTTP Request Status, 2:XMPP ping
 def send_mail(from_addr, to_addr, message_num):
   msg = MIMEText(message[message_num]) 
@@ -30,7 +29,3 @@ def send_mail(from_addr, to_addr, message_num):
   except error:
     print(error) 
     print('Some bad exception occured while before sending') 
-
-if __name__ == '__main__':
-  send_mail('tkms@mag.keio.ac.jp', 'takamasa@ht.sfc.keio.ac.jp', 1) 
-  print('test')
