@@ -20,17 +20,13 @@ def send_mail(from_addr, to_addr, message_num):
   msg['Date'] = formatdate() 
   
   try:
-<<<<<<< HEAD
     s = smtplib.SMTP('localhost') 
-    #s.login('takamasa', 'tkms13??') 
-    #s.connect() 
-    print('yes') 
+    print('connected to mail server') 
     s.sendmail(from_addr, [to_addr], msg.as_string()) 
     s.close() 
   except error:
     print(error) 
     print('Some bad exception occured while before sending') 
-=======
     s = smtplib.SMTP_SSL('', 465) 
     s.connect() 
     s.login('', '') 
@@ -38,5 +34,4 @@ def send_mail(from_addr, to_addr, message_num):
     s.sendmail(from_addr, [to_addr], msg.as_string()) 
     s.close() 
   except:
-    #print(error) 
     print('Some bad exception occured while before sending') 
